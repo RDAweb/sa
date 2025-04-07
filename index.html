@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirect Website</title>
+    <title>Auto Click Website</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -25,21 +25,25 @@
             border: 1px solid #ddd;
             border-radius: 5px;
         }
+        #autoClickLink {
+            display: none;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Redirecting...</h1>
+        <h1>Auto Clicking...</h1>
         <div class="ad-container">
             <!-- Ad space will be shown here -->
             <p>Advertisement</p>
         </div>
-        <p>You will be redirected in a few seconds...</p>
+        <p>Auto clicking in a few seconds...</p>
+        <a id="autoClickLink" href="https://www.effectiveratecpm.com/i39e26tzn4?key=d205c8ea8ba8c68e0ca9cf2b54ab40a2" target="_blank" rel="noopener noreferrer">Click Me</a>
     </div>
 
     <script>
-        // Replace this URL with your desired redirect URL
-        const redirectUrl = "https://www.effectiveratecpm.com/i39e26tzn4?key=d205c8ea8ba8c68e0ca9cf2b54ab40a2";
+        // Replace this URL with your desired target URL
+        const targetUrl = "https://www.effectiveratecpm.com/i39e26tzn4?key=d205c8ea8ba8c68e0ca9cf2b54ab40a2";
         
         // Function to show ads
         function showAd() {
@@ -47,13 +51,19 @@
             console.log("Showing ad...");
         }
 
+        // Function to perform auto click
+        function autoClick() {
+            const link = document.getElementById('autoClickLink');
+            link.click();
+        }
+
         // Show ad when page loads
         window.onload = function() {
             showAd();
-            // Redirect after 5 seconds in a new tab
-            setTimeout(function() {
-                window.open(redirectUrl, '_blank');
-            }, 100);
+            // Set the link's href
+            document.getElementById('autoClickLink').href = targetUrl;
+            // Auto click after 5 seconds
+            setTimeout(autoClick, 100);
         };
     </script>
 </body>
