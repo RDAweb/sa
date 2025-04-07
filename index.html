@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .ad-container {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Redirecting...</h1>
+        <div class="ad-container">
+            <!-- Ad space will be shown here -->
+            <p>Advertisement</p>
+        </div>
+        <p>You will be redirected in a few seconds...</p>
+    </div>
+
+    <script>
+        // Replace this URL with your desired redirect URL
+        const redirectUrl = "https://example.com";
+        
+        // Function to show ads
+        function showAd() {
+            // You can add your ad code here
+            console.log("Showing ad...");
+        }
+
+        // Show ad when page loads
+        window.onload = function() {
+            showAd();
+            // Redirect after 5 seconds
+            setTimeout(function() {
+                window.location.href = redirectUrl;
+            }, 5000);
+        };
+    </script>
+</body>
+</html> 
